@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Profesional en recursos humanos",
+        "lugar":"Carabobo",
+        "tipo": "Full-time",
+        "salario": "No especificado",
+        "postulado": "2 days",
+        "detalle": "Empresa americana requiere personal como Gerente de Recursos Humanos con experiencia en Selección de personal, manejo de programas office, indicadores de gestión, proactiva, dinámica, que maneje el sentido de pertenencia y visión con la empresa"
+    },
+    {
+        "name": "Merey tostado, natural listo para comer!!",
+        "lugar":"Bolívar",
+        "tipo": "Full-time",
+        "salario": "650,00",
+        "postulado": "2 days",
+        "detalle": "MEREY TOSTADO, natural listo para comer!! Dale a tu paladar placeres para degustar, el merey: semilla nutritiva, alimenticia, medicinal. Un pedacito de delicia en Bolívar Ventas al mayor y detal. Información: 0416-0902198, 0424-9400765"
+    },
+    {
+        "name": "Clases de defensa personal",
+        "lugar":"Distrito Capital",
+        "tipo": "Full-time",
+        "salario": "500,00",
+        "postulado": "2 days",
+        "detalle": "Aprende defensa personal, 100 clases desde nivel novato a nivel profesional, estilos krav maga y ufc"
+    },
+    {
+        "name": "programador por hora",
+        "lugar":"Táchira",
+        "tipo": "Full-time",
+        "salario": "consultar precio",
+        "postulado": "2 days",
+        "detalle": "hola, ofrezco servicio de programacion codigo . equipo de trabajo asesoraminto del software y la aplicaciones todo los lenguaje programacion"
+    }
+]

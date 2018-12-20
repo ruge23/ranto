@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Voucher</ion-title>
+    </ion-navbar>
+   </ion-header>
+   
+   <ion-content>
+   <ion-row class="content" justify-content-center no-padding>
+    <voucher></voucher>
+    <ion-row style="margin-top:10px;">
+        <ion-item style="background: transparent;">
+          <ion-col>
+            <h3 class="voucher-titulo">{{dataVoucher.titulo}}</h3>
+            <p class="vencimiento">Vence en</p>
+            <p class="vencimiento">4 horas 32 minutos</p>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+    </ion-row>
+   <ion-grid style="padding: 0px 16px !important">
+      <ion-row style="padding-top: 10px;">
+        <ion-col>
+          <ion-item>
+            <ion-icon name="desktop" item-start></ion-icon>
+            {{dataVoucher.nombre}} <p (click)="goToIntTienda(dataVoucher.dataTienda)"><a style="font-size: 1em;">Ver
+                perfil tienda</a></p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-icon name="pin" item-start></ion-icon>
+            {{dataVoucher.direccion}}
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-icon name="call" item-start></ion-icon>
+            {{dataVoucher.telefono}}
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-col>
+            <p float-left>Codigo del Voucher</p>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+            <h4 float-right>{{dataVoucher.codigo}}</h4>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-col>
+            <p>Descripción</p>
+          </ion-col>
+          <ion-col style="text-align: center !important;" text-wrap>
+            <h4>{{dataVoucher.detalle}}</h4>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+    <ion-row>
+      <ion-item style="text-align: center" no-lines>
+        <ion-col>
+          <!-- <ion-icon  name="finger-print"></ion-icon> -->
+          <button class="green-button" (click)="verCodigo()">Usar</button>
+        </ion-col>
+        <ion-col>
+          <!-- <ion-icon name="trash"></ion-icon> -->
+          <button class="red-button" (click)="eliminarVoucher()">Eliminar</button>
+        </ion-col>
+      </ion-item>
+    </ion-row>
+   </ion-content>

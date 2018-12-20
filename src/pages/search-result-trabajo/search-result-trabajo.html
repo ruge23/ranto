@@ -1,0 +1,21 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>search-result</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  
+  <ion-content padding>
+    <ion-card *ngFor="let item of items" (click)="goToInterna(item)">
+     <ion-card-content>
+        <ion-card-title>
+          {{item.titulo}} en {{item.tienda}}
+        </ion-card-title>
+        <h2>{{item.lugar}}</h2>
+        <p>${{item.salario}}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

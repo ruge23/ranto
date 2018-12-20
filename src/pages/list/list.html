@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mis Vouchers</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-badge color="light" style="width: 100%; border-radius: 0px !important;">
+    <button ion-button full color="primary" (click)="goToCreate()">Crear nuevo Voucher</button>
+  </ion-badge>
+  <ion-card>
+    <ion-card-header>
+      Mis Vouchers Publicados
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngFor="let i of [1,2,3,4,5]">
+        <ion-item text-wrap>
+          <img style="max-width: 65% !important;" src="http://www.bookpte.com/wp-content/uploads/2015/03/voucher-img.png" alt="imagen voucher">
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

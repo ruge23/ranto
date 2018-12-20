@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mis Comercios</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let item of info">
+    <ion-item (click)="goTo(item)">
+      <ion-avatar item-start>
+        <img src="http://ctrlztest.com.ar/ranto/apirest/{{item.imgpath}}">
+      </ion-avatar>
+      <h2>{{item.nombre}}</h2>
+      <p>{{item.direccion}}</p>
+    </ion-item>
+  </ion-list>
+  <div no-padding>
+    <button style="height: 50px;" ion-button full (click)="goToCrearTienda()">Crear tienda</button>
+  </div>
+</ion-content>

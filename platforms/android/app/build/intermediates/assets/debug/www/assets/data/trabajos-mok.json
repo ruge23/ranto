@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Auxiliar Administrativo Contable",
+        "lugar":"Garin, Buenos Aires",
+        "tipo": "Full-time",
+        "area": "Administración",
+        "salario": "No especificado",
+        "postulado": "2 days",
+        "horario": "Lunes a Viernes de 8:30hs a 17:30hs.",
+        "detalle": "Buscamos un desarrollador con fuertes conocimientos técnicos, pasión por la programación y excelentes habilidades para trabajar en equipo.",
+        "postulados": []
+    },
+    {
+        "name": "Encargado/a Contable – Administrativo",
+        "lugar":"Capital Federal, Buenos Aires",
+        "tipo": "Full-time",
+        "area": "Administración",
+        "salario": "No especificado",
+        "postulado": "2 days",
+        "horario": "Lunes a Viernes de 8:30hs a 17:30hs.",
+        "detalle": "Buscamos un desarrollador con fuertes conocimientos técnicos, pasión por la programación y excelentes habilidades para trabajar en equipo.",
+        "postulados": []
+    },
+    {
+        "name": "Programador Frontend",
+        "lugar":"Capital Federal, Buenos Aires",
+        "tipo": "Full-time",
+        "area": "Programación",
+        "salario": "No especificado",
+        "postulado": "2 days",
+        "horario":"Lunes a Viernes de 8:30hs a 17:30hs.",
+        "detalle": "Buscamos un desarrollador con fuertes conocimientos técnicos, pasión por la programación y excelentes habilidades para trabajar en equipo.",
+        "postulados": []
+    },
+    {
+        "name": "Desarrollador Android / Web",
+        "lugar":"Martínez, Buenos Aires",
+        "tipo": "Full-time",
+        "area": "Programación",
+        "salario": "No especificado",
+        "postulado": "2 days",
+        "horario": "Lunes a Viernes de 8:30hs a 17:30hs.",
+        "detalle": "Buscamos un desarrollador con fuertes conocimientos técnicos, pasión por la programación y excelentes habilidades para trabajar en equipo.",
+        "postulados": []
+    }
+]

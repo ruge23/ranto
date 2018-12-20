@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img class="logo_nav" src="../../assets/imgs/logo.svg">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+<!--   <ion-row class="category-info">
+    <img class="img" src="../../assets/imgs/select-categories/fondo-categorias.jpg" style="width: 100%; height: 190px !important;">
+  </ion-row> -->
+  <ion-row class="telefonos-header">
+    <ion-col col-12 text-center style="padding-top: 45px;">
+      <h1 class="tel-item">CATEGORIAS RANTO</h1>
+    </ion-col>
+    <ion-col col-12 text-center>
+      <p class="tel-item">Elige al menos 4 categorias</p>
+    </ion-col>
+  </ion-row>
+  <ion-list *ngIf="categories">
+    <ion-item *ngFor="let cat of categories">
+     <ion-label>{{cat.nombre}}</ion-label>
+     <ion-checkbox color="secondary" (ionChange)="selected($event,cat.categoriaid)" item-right></ion-checkbox>
+   </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <button style="margin: 0px !important; height: 50px;" ion-button full color="violeta" (click)="goToTerminos()" [disabled]="!completolascats">Continuar</button>
+</ion-footer>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mis Empleos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-badge color="light" style="width: 100%; border-radius: 0px !important;">
+    <button ion-button full color="primary" (click)="goToCreate()">Crear nuevo Empleo</button>
+  </ion-badge>
+  <ion-card>
+    <ion-card-header>
+      Mis Empleos Publicados
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngFor="let puesto of empleos">
+        <ion-item text-wrap (click)="detallePuesto(puesto)">
+          <ion-icon name="briefcase" item-start></ion-icon>
+          {{puesto.titulo}}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

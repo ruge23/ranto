@@ -1,0 +1,4 @@
+#Thu Dec 20 14:30:02 ART 2018
+base.0=/home/rodrigo/tutorialIonic/ranto/github/ranto/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

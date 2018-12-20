@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Select Categories</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list *ngIf="categories">
+      <ion-item *ngFor="let cat of categories">
+       <ion-label>{{cat.nombre}}</ion-label>
+       <ion-checkbox color="secondary" [checked]="cat.ischecked" (ionChange)="selected($event,cat.categoriaid)" item-right></ion-checkbox>
+     </ion-item>
+    </ion-list>
+    <button ion-button (click)="goToTerminos()" [disabled]="!completolascats">Continuar</button>
+  </ion-content>
+  

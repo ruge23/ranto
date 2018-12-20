@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Vendedor</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row justify-content-center>
+    <img style="width: 150px !important; height: 150px !important;" src="https://img.icons8.com/ios/1600/user-male-circle-filled.png">
+  </ion-row>
+  <ion-list *ngFor="let user of dataUser">
+    <ion-row justify-content-center>
+      <p><strong>{{user.nombre}} {{user.apellido}}</strong></p>
+    </ion-row>
+    <ion-row justify-content-center>
+      <p><strong>{{user.email}}</strong></p>
+    </ion-row>
+    <ion-row justify-content-center>
+      <p><strong>{{user.telefono}}</strong></p>
+    </ion-row>
+  </ion-list>
+  <ion-row justify-content-center>
+    <ion-col style="text-align: center;">
+      <button ion-button icon-only>
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col style="text-align: center;">
+      <button ion-button icon-only>
+        <ion-icon name="mail"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Crear Producto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombreProd" clearInput></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Detalle</ion-label>
+      <ion-textarea type="text" [(ngModel)]="detalleProd" clearInput></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Precio</ion-label>
+      <ion-input type="number" [(ngModel)]="precioProd" clearInput></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Categoria</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="categoria">
+        <ion-option *ngFor="let cat of categorias" [value]="cat.categoriaid">{{cat.nombre}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button (click)="abrirGaleria()">Seleccionar imagenes</button>
+    </ion-item>
+
+    <ion-item *ngIf="imageBox.length > 0">
+      <ion-card *ngFor="let img of imageBox; let i = index">
+        <img src="{{img}}" />
+        <ion-card-content>
+        </ion-card-content>
+        <ion-row no-padding>
+          <ion-col text-right>
+            <button ion-button clear small color="danger" (click)="eliminarImg(i)" icon-start>
+              <ion-icon name='share-alt'></ion-icon>
+              Borrar
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button block (click)="guardarProd()">Guardar</button>
+  </div>
+</ion-content>

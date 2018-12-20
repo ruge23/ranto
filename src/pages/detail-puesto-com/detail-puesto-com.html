@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Interna Empleo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="pin" item-start large></ion-icon>
+      <h2 text-wrap>{{detalle_puesto.titulo}}</h2>
+      <p text-wrap>{{detalle_puesto.lugar}}</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="list-box" item-start large></ion-icon>
+      <h2>Area</h2>
+      <p text-wrap>{{detalle_puesto.area}}</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="list-box" item-start large></ion-icon>
+      <h2>Carga horaria</h2>
+      <p text-wrap>{{detalle_puesto.cargahoraria}}</p>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-icon name="list-box" item-start large></ion-icon>
+      <h2>Salario</h2>
+      <p text-wrap>{{detalle_puesto.salario}}</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="list-box" item-start large></ion-icon>
+      <h2>Horario</h2>
+      <p text-wrap>{{detalle_puesto.horario}}</p>
+    </ion-item>
+
+    <ion-item class="detalle">
+      <ion-icon name="list-box" item-start large></ion-icon>
+      <h2>Detalle</h2>
+      <p>{{detalle_puesto.detalle}}</p>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button full (click)="postulados()">Ver Postulados</button>
+    </ion-item>
+
+  </ion-card>
+</ion-content>

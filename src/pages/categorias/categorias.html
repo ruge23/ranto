@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{titulo}}</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="logoutme()">
+        <ion-icon name=''></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-grid>
+    <ion-row *ngIf="products.length > 0">
+      <ion-col *ngFor="let product of products" col-6>
+        <ion-card style="width: 100% !important; margin: 0px !important; min-height: 177px !important;" (click)="goToIntProd(product)">
+          <img style="min-height: 105px;" src="http://ctrlztest.com.ar/ranto/apirest/{{product.imagenes}}" alt="imagen producto">
+          <ion-card-content style="padding: 5px !important;">
+            <ion-card-header style="padding:0px !important;">
+              <p text-wrap style="font-size: 1em;"><strong>{{product.nombre}}</strong></p>
+            </ion-card-header>
+            <p text-wrap style="color: #488aff;font-size: 1em;">{{product.precio | currency}}.-ARS</p>
+          </ion-card-content>
+          <ion-badge color="light" style="width: 100%; border-radius: 0px !important;">
+            <p style="font-size: 0.8em; text-align: start;">
+              <ion-icon style="margin-right: 5px;" name="time"></ion-icon>Termina en {{time | date: 'dd-MM'}}
+            </p>
+          </ion-badge>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="products.length == 0">
+      <ion-col text-center>
+        <p text-wrap><strong>Todavia no hay productos en esta categoría.</strong></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

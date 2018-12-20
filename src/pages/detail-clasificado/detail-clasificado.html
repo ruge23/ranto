@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title>Clasificado</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-badge color="celeste" style="margin-top: 15px; width: 100%;height: 45px; border-radius: 0px !important;">
+    <p style="margin: 10px 0 !important;font-size: 1.3em;"><strong>{{detalle_puesto.titulo}}</strong></p>
+  </ion-badge>
+  <ion-card>
+      <ion-card-header>
+        <p style="padding-bottom: 10px !important; color: #999999; border-bottom: 2px solid lightgray;"><strong>{{detalle_puesto.titulo}}</strong></p>
+      </ion-card-header>
+      <ion-card-content>
+        <p text-wrap>{{detalle_puesto.detalle}}</p>
+      </ion-card-content>   
+    </ion-card>
+</ion-content>
+<ion-footer>
+    <button style="margin: 0px !important; height: 50px;" ion-button full color="btnPostularse" (click)="verClasificado(detalle_puesto.usuarioid)">
+      <strong>Ver</strong> 
+    </button>
+  </ion-footer>

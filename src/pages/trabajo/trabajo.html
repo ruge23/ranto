@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <button ion-button menuToggle>
+      <ion-icon color="iconMenu" name="menu"></ion-icon>
+    </button>
+    <ion-title>Clasificados</ion-title>
+  </ion-navbar>
+  <ion-searchbar placeholder="Buscar" style="background-color: #ffffff !important;" color="navbar" [(ngModel)]="txtbusqueda" (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list *ngIf="items">
+    <ion-item (click)="goToBusqueda(txtbusqueda)" *ngIf="txtbusqueda">
+      {{ txtbusqueda }}
+    </ion-item>
+    <ion-item *ngFor="let item of items" (click)="goToBusqueda(item)">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-header>
+
+
+<ion-content class=" cards-bg" no-padding>
+  <img src="../../assets/imgs/trabajo/header.jpg" alt="">
+  <ion-badge color="light" style="width: 100%; border-radius: 0px !important;">
+    <button class="crear-clasificado" ion-button full color="primary" (click)="goToCreateClas()">Crear Clasificado</button>
+  </ion-badge>
+  <button class="buttonHome" ion-button full color="celeste" icon-end (click)="expandItem(1)">
+    Empleos
+    <ion-icon [name]="visible1 ? 'arrow-down' : 'arrow-forward'"></ion-icon>
+  </button>
+  <ion-card *ngIf="expanded1" class="cards-list-demo">
+    <ion-card-header>
+      <h3>Empleos</h3>
+    </ion-card-header>
+    <ion-list *ngFor="let puesto of puestos">
+      <button ion-item (click)="detallePuesto(puesto)">
+        <ion-icon name="contact" item-start></ion-icon>
+        {{puesto.titulo}}
+      </button>
+    </ion-list>
+  </ion-card>
+  <button class="buttonHome" ion-button full color="celeste" icon-end (click)="expandItem(2)">
+    Clasificados
+    <ion-icon [name]="visible2 ? 'arrow-down' : 'arrow-forward'"></ion-icon>
+  </button>
+  <ion-card *ngIf="expanded2" class="cards-list-demo">
+    <ion-card-header>
+      <h3>
+        Clasificados
+      </h3>
+    </ion-card-header>
+    <ion-list *ngFor="let clas of clasificados">
+      <button ion-item (click)="detalleClasificado(clas)">
+        <ion-icon name="clipboard" item-start></ion-icon>
+        {{clas.titulo}}
+      </button>
+    </ion-list>
+  </ion-card>
+</ion-content>

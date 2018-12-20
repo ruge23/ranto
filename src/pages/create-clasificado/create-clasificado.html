@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear Clasificado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Titulo</ion-label>
+        <ion-input type="text" clearInput [(ngModel)]="titulo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Detalle</ion-label>
+        <ion-textarea type="text" [(ngModel)]="detalle"></ion-textarea>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+
+
+
+  <div padding>
+    <button class="guardar" ion-button block (click)="guardarClas()">Guardar</button>
+  </div>
+</ion-content>

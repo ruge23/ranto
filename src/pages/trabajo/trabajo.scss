@@ -1,0 +1,37 @@
+page-trabajo {
+  ion-card.cards-list-demo ion-card-header {
+    color: map-get($colors, primary);
+  }
+
+  .cards-bg {
+    background: #f1f1f1;
+  }
+
+  .crear-clasificado {
+    border-radius: 1px;
+    background: #3b5998;
+    font-weight: 600;
+  }
+
+  button.buttonHome{
+    height: 50px;
+    margin: 20px 0;
+  }
+
+  .cards-list-demo {
+    box-shadow: -0.3px 1px 4px grey;
+
+    ion-card-header {
+      background: #6663a8;
+
+      h3 {
+        color: white;
+        font-size: 1.3em;
+      }
+    }
+
+    ion-icon {
+      color: #56acde;
+    }
+  }
+}

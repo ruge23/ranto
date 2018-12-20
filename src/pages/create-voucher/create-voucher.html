@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Create Voucher</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+    
+    <ion-item>
+    <ion-label floating>Titulo</ion-label>
+    <ion-input type="text" clearInput [(ngModel)]="titulo"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+    <ion-label floating>Descripcion</ion-label>
+    <ion-textarea type="text" [(ngModel)]="detalle"></ion-textarea>
+    </ion-item>
+    
+    <ion-item>
+    <ion-label floating>Fecha vencimiento</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="fechavencimiento"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Cantidad</ion-label>
+      <ion-input type="text" [(ngModel)]="cantidad"></ion-input>
+    </ion-item>
+    
+    </ion-list>
+    
+    <div padding>
+      <button ion-button block (click)="crearVoucher()">Crear</button>
+    </div>
+   </ion-content>
+

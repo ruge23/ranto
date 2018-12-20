@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Interna Producto</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="logoutme()">
+        <ion-icon name=''></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-slides>
+          <ion-slide *ngFor="let img of data_prod.imagenes">
+            <img src="http://ctrlztest.com.ar/ranto/apirest/{{img}}" alt="imagen producto">
+          </ion-slide>
+        </ion-slides>
+      </ion-item>
+      <ion-item>
+        <ion-row>
+          <ion-col>
+            <h1>{{data_prod.nombre}}</h1>
+            <p>${{data_prod.precio}}</p>
+          </ion-col>
+          <ion-col>
+            <!-- <ion-icon name="heart-empty" color="violeta"></ion-icon> -->
+            <ion-icon style="font-size: 1.4em; margin: 5px;" float-right [color]="isChecked ? 'danger' : 'dark'" name="heart" (click)="favorito(data_prod.productoid)"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item>
+        <!-- <ion-row>
+          <ion-col>
+            Publicado:
+          </ion-col>
+          <ion-col float-right>
+            {{data_prod.fechapublicacion}}
+          </ion-col>
+        </ion-row> -->
+        <ion-icon name="desktop"></ion-icon>
+        {{data_prod.tienda}}
+        <span (click)="goToIntTienda(data_prod.tiendaid)">
+          <a style="font-size: 0.7em;">Ver perfil tienda</a>
+        </span>
+      </ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-icon name="list-box"></ion-icon>
+          Descripción
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{data_prod.detalle}}</p>
+        </ion-card-content>
+      </ion-card>
+  <!-- <ion-item>
+    <ion-slides>
+      <ion-slide *ngFor="let img of data_prod.imagenes">
+        <img src="http://ctrlztest.com.ar/ranto/apirest/{{img}}" alt="imagen producto">
+      </ion-slide>
+    </ion-slides>
+  </ion-item>
+  <ion-item>
+    <h1>{{data_prod.nombre}}</h1>
+    <p>${{data_prod.precio}}</p>
+  </ion-item>
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="list-box"></ion-icon>
+      Descripción      
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{data_prod.detalle}}</p>
+    </ion-card-content>
+  </ion-card> -->
+</ion-content>

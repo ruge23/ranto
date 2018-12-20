@@ -1,0 +1,53 @@
+page-int-voucher {
+  .row {
+    text-align: center;
+  }
+ 
+  ion-item {
+    min-height: 12vh;
+    height: 16vh;
+  }
+ 
+  ion-row.content{
+    background-image: url('../../assets/imgs/home/bg.jpg') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+ 
+  ion-icon {
+    color: #56acde;
+  }
+ 
+  .voucher-titulo {
+    margin-left: 7px;
+    color: #2581ee;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding-bottom: 8px;
+  }
+ 
+  .vencimiento {
+    margin-left: 7px !important;
+    margin: 5px auto;
+    color: black;
+    font-weight: 600;
+  }
+ 
+  .green-button,
+  .red-button {
+    background: #01c15e;
+    width: 35%;
+    height: 35px;
+    padding: 10px;
+    color: white;
+    font-size: .9em;
+    font-weight: 800;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+ 
+  .red-button {
+    background: #c50d0d;
+  }
+ }

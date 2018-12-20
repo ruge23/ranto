@@ -1,0 +1,30 @@
+.voucher-ticket {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 85%;
+  }
+
+  div {
+    position: relative;
+    bottom: 25vh;
+    left: -4vw;
+    width: 45%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+
+    p {
+      font-size: 8vw;
+      text-align: center;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

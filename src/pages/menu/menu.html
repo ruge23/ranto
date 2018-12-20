@@ -1,0 +1,41 @@
+<ion-menu id="sidemenu" [content]="content">
+  <ion-header id="sidemenu-header">
+    <ion-item style=" margin-top: 10%;">
+      <ion-avatar item-end>
+        <img src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg">
+      </ion-avatar>
+
+      <ion-icon style="color:white;" name="close" item-start menuClose></ion-icon>
+      <!-- <h2>
+        Exequiel Castro
+      </h2> -->
+    </ion-item>
+  </ion-header>
+
+  <ion-content>
+    <ion-list class="list-links">
+      <div *ngFor="let p of pages">
+        <button class="links" ion-item detail-none block center text-center menuClose (click)="openPage(p)">
+          <!-- <ion-icon item-start [name]="p.icon"></ion-icon> -->
+          {{ p.title }}
+        </button>
+      </div>
+      <button class="links" ion-item detail-none block center text-center menuClose (click)="goToMiTienda()">Tienda virtual
+      </button>
+
+    </ion-list>
+
+  </ion-content>
+
+  <ion-footer>
+    <ion-row (click)="logout()">
+      <ion-col class="logout">
+        <ion-icon name="log-out"></ion-icon>
+        <p>Cerra sesión</p>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content main swipeBackEnabled="false"></ion-nav>

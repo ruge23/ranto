@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ultimo paso</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding>
+  <ion-row justify-content-center>
+    <img src="../../assets/imgs/ultimoPaso/header.jpg"  style="height: 190px !important;">
+  </ion-row>
+  <ion-row justify-content-center>
+    <ion-col col-9 style="text-align: center;">
+      <p text-wrap>Si estas en búsqueda laboral, puedes completar tu curriculum haciendo click aqui</p>
+    </ion-col>
+  </ion-row>
+  <ion-row justify-content-center>
+    <button color="celeste" ion-button icon-start>
+      <ion-icon style="font-size: 2em;" name="briefcase"></ion-icon>
+      Quiero Trabajar
+    </button>  
+  </ion-row>
+  <ion-row justify-content-center style="margin-top: 20px; border-top: 2px solid lightgray;">
+    <ion-col col-9 style="text-align: center;">
+      <p text-wrap>Si queres empezar a utilizar Ranto acepta los términos y condiciones y te damos la bienvenia</p>
+    </ion-col>
+  </ion-row>
+  <ion-row justify-content-center>
+    <ion-item style="padding-left: 25px !important;" no-lines>
+      <ion-label text-wrap style="font-size: 0.7em;"><strong>Acepto Términos y condiciones de Ranto</strong></ion-label>
+      <ion-checkbox style="margin: 9px !important;" color="secondary" (ionChange)="selected($event)"></ion-checkbox>
+    </ion-item>
+  </ion-row>  
+  <!-- <button style="margin: 0 auto;" ion-button >Acepta terminos y condiciones</button> -->
+</ion-content>
+<ion-footer>
+  <button style="margin: 0px !important; height: 50px;" ion-button full color="violeta" [disabled]="!checkTerminos" (click)="goToHome()">
+    Empezar
+  </button>
+</ion-footer>

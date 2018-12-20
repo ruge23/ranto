@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Nuevo Empleo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-content padding>
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Titulo</ion-label>
+        <ion-input type="text" [(ngModel)]="titulo" clearInput></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Area</ion-label>
+        <ion-select interface="action-sheet" [(ngModel)]="area">
+          <ion-option *ngFor="let area of listaAreas" [value]="area.areaid">{{area.nombre}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Carga Horaria</ion-label>
+        <ion-select interface="action-sheet" [(ngModel)]="cargahoraria">
+          <ion-option *ngFor="let carga of listaCargahoraria" [value]="carga.cargahorariaid">{{carga.nombre}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Descripcion</ion-label>
+        <ion-textarea type="text" [(ngModel)]="detalle"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Salario</ion-label>
+        <ion-input type="text" clearInput [(ngModel)]="salario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Horario</ion-label>
+        <ion-input type="text" [(ngModel)]="horario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Dirección</ion-label>
+        <ion-input type="text" [(ngModel)]="direccion"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <button ion-button block (click)="createEmpleo()">Crear</button>
+    </div>
+  </ion-content>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title>Evento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <div>
+        <ion-segment [(ngModel)]="galleryType" color="violeta">
+          <ion-segment-button value="regular">
+            Evento
+          </ion-segment-button>
+          <ion-segment-button value="pinterest">
+            Mas Eventos
+          </ion-segment-button>
+        </ion-segment>
+        
+        <div [ngSwitch]="galleryType">
+          
+          <ion-grid *ngSwitchCase="'regular'">
+            <ion-row justify-content-center>
+              <img style="width: 60%; height: 60%;" src="{{data_evento.imgpath}}"/>
+            </ion-row>
+            <ion-row justify-content-center>
+              <ion-col>
+                <h4 text-center>{{data_evento.titulo}}</h4>
+              </ion-col>
+            </ion-row>
+            <ion-row justify-content-center>
+              <ion-col>
+                <p text-center text-wrap>{{data_evento.detalle}}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      
+          <div class="images" *ngSwitchCase='"pinterest"'>
+            <div class="one-image" *ngFor="let product of list">
+              <ion-card (click)="goToInterna(product)">
+                <img src="http://ctrlztest.com.ar/ranto/apirest/{{product.imagenes}}" alt="unit-image">
+                <ion-card-content>
+                  <ion-card-title>
+                    {{product.nombre}}
+                  </ion-card-title>              
+                </ion-card-content>
+                    <ion-col>
+                      <button ion-button icon-start clear>
+                        <ion-icon name="logo-usd"></ion-icon>
+                        <div>{{product.precio}}</div>
+                      </button>
+                    </ion-col>
+              </ion-card>
+            </div>
+          </div>
+    </div>
+  </div>
+
+</ion-content>

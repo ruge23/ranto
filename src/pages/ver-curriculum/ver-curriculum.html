@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ver curriculum</ion-title>
+  </ion-navbar>
+ 
+ </ion-header>
+ 
+ 
+ <ion-content padding>
+    <img class="profile-image" src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg">
+    <h1 style="color: #73acd9">{{postulado.nombre}} {{postulado.apellido}}</h1>
+    <p>Edad: {{calcularEdad(postulado.fechanacimiento)}}</p>
+    <p>Direccion: {{postulado.direccion}}</p>
+    <p>Telefono: {{postulado.telefono}}</p>
+     <ion-list *ngIf="postulado.experiencias">
+      <ion-list-header>
+        Experiencias laborales
+      </ion-list-header>
+      <ion-item *ngFor="let experiencia of postulado.experiencias">
+        <h1 style="color: #73acd9">{{experiencia.titulo}}</h1>
+        <p>{{experiencia.detalle}}</p>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngIf="postulado.estudios">
+      <ion-list-header>
+        Estudios
+      </ion-list-header>
+      <ion-item *ngFor="let estudio of postulado.estudios">
+        <h1 style="color: #73acd9">{{estudio.titulo}}</h1>
+        <p>{{estudio.detalle}}</p>
+      </ion-item>
+    </ion-list>
+ </ion-content>

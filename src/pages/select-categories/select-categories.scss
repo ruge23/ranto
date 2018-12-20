@@ -1,0 +1,26 @@
+page-select-categories {
+    .telefonos-header{
+        background-image: url('../../assets/imgs/select-categories/fondo-categorias.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+    .tel-item{
+        display: block;
+        color: white;
+    }
+    h1, p{
+        margin: 0px;
+    }
+    .logo_nav{
+        width: 90px !important;
+    }
+    img.img{
+        background-position: center;
+        background-attachment: fixed;
+    }
+}

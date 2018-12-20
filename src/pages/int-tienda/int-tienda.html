@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tienda Virtual</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <img style="display: flex; margin: 0 auto;" src="http://ctrlztest.com.ar/ranto/apirest/{{dataTienda.imgpath}}" alt="imagen tienda">
+  <div padding>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-icon name="desktop" item-start></ion-icon>
+            {{dataTienda.nombre}}
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-icon name="pin" item-start></ion-icon>
+            {{dataTienda.direccion}} <span><p style="font-size: 0.7em;">Ver ubicación</p></span>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-icon name="call" item-start></ion-icon>
+            {{dataTienda.telefono}} <span><p style="font-size: 0.7em;">Llamar</p></span>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col>
+        <ion-item text-wrap>
+          <ion-icon name="logo-facebook" item-start></ion-icon>
+            {{dataTienda.face}}
+        </ion-item>
+      </ion-col>
+    </ion-row> -->
+  </div>
+  <ion-badge color="violeta" style="width: 100%; border-radius: 0px !important;">
+    <ion-item no-lines style="background-color: transparent !important;">
+      <ion-icon name="bookmarks" item-start></ion-icon>
+      Solicita vouchers Rantos
+    </ion-item>
+  </ion-badge>
+  <ion-grid>
+    <ion-card>
+      <ion-card-header>
+        Publicaciones
+      </ion-card-header>
+      <ion-card-content>
+        <ion-row>
+          <ion-col *ngFor="let product of productos" (click)="goToInternaProd(product)" col-6>
+            <ion-card>
+              <img src="http://ctrlztest.com.ar/ranto/apirest/{{product.imagenes}}" alt="imagen producto">
+              <ion-card-content>
+                <p>${{product.nombre}}</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    </ion-grid>
+</ion-content>

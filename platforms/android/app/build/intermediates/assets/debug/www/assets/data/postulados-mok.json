@@ -1,0 +1,21 @@
+[
+    {
+        "name":"Rodrigo Ruiz",
+        "edad":"28",
+        "direccion":"Av. Los Incas 5150, Capital federal",
+        "tel":"12345678",
+        "fotoUser": "https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"    },
+    {
+        "name":"Rodrigo Ruiz",
+        "edad":"28",
+        "direccion":"Av. Los Incas 5150, Capital federal",
+        "tel":"12345678",
+        "fotoUser": "https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"    },
+    {
+        "name":"Rodrigo Ruiz",
+        "edad":"28",
+        "direccion":"Av. Los Incas 5150, Capital federal",
+        "tel":"12345678",
+        "fotoUser": "https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jp"
+    }
+]

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title>Categorias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list>
+    <ion-item style="height: 80px; border-bottom: 1px solid lightgray;" *ngFor="let cat of all" [ngStyle]="{'border-left': cat.className}"
+      (click)="goToIntProd(cat)">
+      <ion-row>
+        <ion-col col-8 class="colnombre">
+          <h3 text-wrap><strong>{{cat.nombre}}</strong></h3>
+        </ion-col>
+        <ion-col col-4>
+          <button ion-button outline color="violeta" class="buttonvioleta" (click)="goToIntProd(cat.categoriaid)">
+            VER
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+</ion-content>

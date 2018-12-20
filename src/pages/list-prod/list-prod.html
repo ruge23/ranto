@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista Productos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-badge color="light" style="width: 100%; border-radius: 0px !important;">
+    <button ion-button full color="primary" (click)="goToCreateProd()">Crear nuevo Producto</button>
+  </ion-badge>
+  <div padding>
+    <ion-segment [(ngModel)]="galleryType">
+      <ion-segment-button value="regular">
+        Mis Productos
+      </ion-segment-button>
+      <ion-segment-button value="pinterest">
+        Producto
+      </ion-segment-button>
+    </ion-segment>
+    
+    <div [ngSwitch]="galleryType">
+      
+      <ion-grid *ngSwitchCase="'regular'">
+        <ion-row>
+          <ion-col col-6 col-md-4 col-xl-3 *ngFor="let product of list">
+            <ion-card class="image-container" (click)="goToInterna(product)">
+              <img src="http://ctrlztest.com.ar/ranto/apirest/{{product.imagenes}}"/>
+              <ion-card-content>
+                  <ion-card-title>
+                    {{product.nombre}}
+                  </ion-card-title>                
+                </ion-card-content>
+            </ion-card> 
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+      <div class="images" *ngSwitchCase='"pinterest"'>
+        <div class="one-image" *ngFor="let product of list">
+          <ion-card (click)="goToInterna(product)">
+            <img src="http://ctrlztest.com.ar/ranto/apirest/{{product.imagenes}}" alt="unit-image">
+            <ion-card-content>
+              <ion-card-title>
+                {{product.nombre}}
+              </ion-card-title>              
+            </ion-card-content>
+                <ion-col>
+                  <button ion-button icon-start clear>
+                    <ion-icon name="logo-usd"></ion-icon>
+                    <div>{{product.precio}}</div>
+                  </button>
+                </ion-col>
+          </ion-card>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</ion-content>

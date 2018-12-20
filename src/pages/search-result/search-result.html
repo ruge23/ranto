@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>search-result</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of items" (click)="goToInternaProducto(item)">
+    <img src="http://ctrlztest.com.ar/ranto/apirest/{{item.imagenes}}" />
+    <ion-card-content>
+      <ion-card-title>
+        {{item.nombre}}
+      </ion-card-title>
+      <h2>{{item.precio}}</h2>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

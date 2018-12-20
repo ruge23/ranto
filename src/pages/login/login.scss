@@ -1,0 +1,56 @@
+page-login {
+    .scroll-content{
+        background: linear-gradient(to bottom,  #7162b7, #73acd9); 
+    }
+
+    .logo1{
+        width: 100px;
+    }
+
+    .logo2{
+        width: 180px;
+    }
+
+    h3{
+        color: map-get($colors, light )
+    }
+
+    ion-list.list{
+        margin-bottom: 0px;
+    }
+    
+    ion-col {
+        text-align: center;
+    }
+
+    ion-item.item.item-block.item-md.item-input.item-label-floating.ng-pristine.ng-valid.ng-touched{
+        .list-md .item-input:last-child{
+            border-bottom: none !important;
+        }
+    }
+
+    ion-item.item{
+        background-color: transparent !important;
+    }
+
+    .item-inner{
+        border: none!important;
+        box-shadow: none;
+    }
+    .list-ios > .item-block:first-child {
+        border-top: none;
+    }
+
+    button{
+        padding: 0px;
+        color: #3b5998;
+    }
+    
+    .footer{
+        background-color: #73acd9 !important;
+    }
+    .footer::before{
+        background-image: none !important;
+    }
+
+}

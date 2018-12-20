@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mi Tienda</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row justify-content-center>
+    <ion-col style="text-align: center !important">
+      <h1 text-center>Comercio</h1>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="text-align: center !important">
+      <img text-center style="margin: 0 auto;" class="profile-image" src="http://ctrlztest.com.ar/ranto/apirest/{{info.imgpath}}">
+    </ion-col>
+  </ion-row>
+  <h4 text-center>{{info.nombre}}</h4>
+  <p text-center>{{info.direccion}}</p>
+  <button ion-button full color="violeta" (click)="goToListProd()">Mis Productos</button>
+  <button ion-button full color="violeta" (click)="goToListEmpleo()">Mis Empleos</button>
+  <button ion-button full color="violeta" (click)="goToLisVoucher()">Mis Vouchers</button>
+</ion-content>

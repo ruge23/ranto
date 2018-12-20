@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mis Publicaciones</ion-title>
+  </ion-navbar>
+  <div padding>
+    <ion-segment [(ngModel)]="icons" color="violeta">
+      <ion-segment-button value="camera">
+          Activas
+      </ion-segment-button>
+      <ion-segment-button value="bookmark">
+        Finalizadas
+      </ion-segment-button> 
+    </ion-segment>
+  </div>
+</ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="icons">
+    <ion-list *ngSwitchCase="'camera'">
+    <ion-item *ngFor="let prdact of publicacionesactivo" (click)="goToInterna(prdact)">
+      <ion-thumbnail item-start>
+        <img src="http://ctrlztest.com.ar/ranto/apirest/{{prdcat.imagenes[0]}}">
+      </ion-thumbnail>
+      <h3>{{prdact.nombre}}</h3>
+      <p text-wrap>{{prdact.fechapublicacion}}</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'bookmark'">
+      <ion-item *ngFor="let prdfin of publicacionesfinalizadas" (click)="goToInterna(prdfin)">
+        <ion-thumbnail item-start>
+          <img src="http://ctrlztest.com.ar/ranto/apirest/{{prdfin.imagenes[0]}}">
+        </ion-thumbnail>
+        <h3>{{prdfin.nombre}}</h3>
+        <p text-wrap>{{prdfin.fechapublicacion}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

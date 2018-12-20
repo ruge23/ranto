@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-navbar color="navbar" hideBackButton no-border-bottom>
+    <ion-row>
+      <ion-col>
+        <button float-left ion-button menuToggle>
+          <ion-icon name="menu" color="iconMenu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col style="align-items: center !important;">
+        <img class="logo_nav" src="../../assets/imgs/logo.svg">
+      </ion-col>
+      <ion-col>
+        <ion-avatar (click)="goToPerfil()">
+          <img *ngIf="fbId" float-right style="max-width: 40% !important; border-radius: 20px;" src="urlImgFb">
+          <img float-right style="max-width: 40% !important; border-radius: 20px;" src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg">
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+  <ion-toolbar no-border-top color="navbar" style="padding: 0px !important;">
+    <ion-segment [(ngModel)]="home">
+      <ion-segment-button value="value0" (click)="goToAllCategories()">
+        <ion-icon name="apps"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button *ngFor="let cat of miscategorias" value="value{{cat.categoriaid}}" (click)="goToCategories(cat.categoriaid)">
+        <img src="http://ctrlztest.com.ar/ranto/apirest/{{cat.icono}}" style="width: 7vw; margin-top: 9px;" alt="">
+      </ion-segment-button>
+     <!--  <ion-segment-button value="value2" (click)="goToCategories()">
+        <ion-icon name="car"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="value3" (click)="goToCategories()">
+        <ion-icon name="briefcase"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="value4" (click)="goToCategories()">
+        <ion-icon name="umbrella"></ion-icon>
+      </ion-segment-button> -->
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row justify-content-center>
+    <ion-col style="text-align: center;">
+      <img src="../../assets/imgs/home/bienvenidos.jpg">
+    </ion-col>
+  </ion-row>
+  <button class="buttonHome" ion-button full color="celeste" icon-end (click)="expandItem(1)">
+    Canjeá tus vouchers
+    <ion-icon [name]="visible1 ? 'arrow-down' : 'arrow-forward'"></ion-icon>
+  </button>
+  <ion-slides style="height: 250px;" *ngIf="expanded1" loop="false" slidesPerView="1.5">
+      <ion-slide *ngFor="let vouch of vouchers">
+        <ion-card (click)="goToIntVoucher(vouch)">
+          <img src="../../assets/imgs/home/voucher.png">
+          <ion-card-title>
+            <h4>{{vouch.titulo}}</h4>
+          </ion-card-title>
+          <ion-card-content>
+            <p text-wrap>{{vouch.detalle}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  <button class="buttonHome" ion-button full color="celeste" icon-end (click)="expandItem(2)">
+    Hoy en {{localidad}}
+    <ion-icon [name]="visible2 ? 'arrow-down' : 'arrow-forward'"></ion-icon>
+  </button>
+  <ion-slides style="height: 250px;" *ngIf="expanded2" loop="false" slidesPerView="1.5">
+      <ion-slide *ngFor="let event of eventos">
+        <ion-card (click)="goToInternaEvento(event)">
+          <img src="{{event.imgpath}}" alt="Imagen Vouchers">
+          <ion-card-title>
+            <h4>{{event.titulo}}</h4>
+          </ion-card-title>
+          <ion-card-content>
+            <p text-wrap>{{event.detalle}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  <button class="buttonHome" ion-button full color="celeste" icon-end (click)="expandItem(3)">
+    Últimos articulos
+    <ion-icon [name]="visible3 ? 'arrow-down' : 'arrow-forward'"></ion-icon>
+  </button>
+  <ion-slides style="height: 300px;" *ngIf="expanded3" loop="false" slidesPerView="1.5">
+      <ion-slide *ngFor="let prod of ultProd">
+          <ion-card (click)="goToIntProd(prod)">
+            <img src="http://ctrlztest.com.ar/ranto/apirest/{{prod.imagenes[0]}}" alt="Imagen Vouchers">
+            <ion-card-title>
+              <h4>{{prod.nombre}}</h4>
+            </ion-card-title>
+            <ion-card-content>
+              <p text-wrap>${{prod.precio}}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+     <!--  <ion-slide *ngFor="let prod of ultProd">
+        <ion-card (click)="goToIntProd(prod)">
+          <ion-slides>
+            <ion-slide *ngFor="let img of prod.imagenes">
+              <img style="height: 105px;" src="http://ctrlztest.com.ar/ranto/apirest/{{img}}" alt="imagen producto">
+            </ion-slide>
+          </ion-slides>
+          <ion-card-title>
+            <h4>{{prod.nombre}}</h4>
+          </ion-card-title>
+          <ion-card-content>
+            <p>{{prod.precio}}</p>
+            <p text-wrap>{{prod.detalle}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide> -->
+    </ion-slides>
+  <!-- <button ion-button full color="celeste" (click)="expandItem()">Mis Vouchers</button> -->
+</ion-content>

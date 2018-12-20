@@ -1,0 +1,22 @@
+page-all-categories {
+    ion-item.itemCat1{
+        height: 70px;
+        border-left: 5px solid #58dbd2;
+    }
+    ion-item.itemCat2{
+        height: 70px;
+        border-left: 5px solid #FEAC52;
+    }
+    ion-item.itemCat3{
+        height: 70px;
+        border-left: 5px solid #918BF9;
+    }
+    .buttonvioleta{
+        width: 22vw!important;
+        height: 6vh!important;
+    }
+    .colnombre{
+        display: flex;
+        align-items: center;
+    }
+}

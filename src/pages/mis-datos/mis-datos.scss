@@ -1,0 +1,28 @@
+page-mis-datos {
+  .datos {
+    ion-item,
+    .nombre {
+      margin: 10px 0;
+      border-bottom: 1px solid lightgrey !important;
+
+      ion-input,
+      ion-datetime,
+      ion-option {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .list-ios > .item-block:first-child,
+  .list-ios .item-block .item-inner,
+  .list-ios > .item-block:last-child,
+  .list-ios > .item-wrapper:last-child .item-block {
+    border: 0;
+  }
+
+  .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+  .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border: 0;
+    box-shadow: inset 0 0px 0 0 #56abe1;
+  }
+}

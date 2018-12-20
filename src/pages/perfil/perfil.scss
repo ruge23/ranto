@@ -1,0 +1,25 @@
+page-perfil {
+  .avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .links-perfil {
+    button {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: #f8f8fa;
+      margin: 8px 0;
+      border: none;
+    }
+  }
+
+  .list-ios > .item-block:first-child,
+  .list-ios .item-block .item-inner,
+  .list-ios > .item-block:last-child,
+  .list-ios > .item-wrapper:last-child .item-block {
+    border: 0;
+  }
+}

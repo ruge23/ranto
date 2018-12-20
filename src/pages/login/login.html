@@ -1,0 +1,46 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img class="logo1" src="../../assets/imgs/login/logo-blanco.png" alt="logo ranto">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img class="logo2" src="../../assets/imgs/login/iso-circulos.png" alt="logo ranto">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h3 style="margin: 0px !important;">Empezar!</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center style="margin-top: 10px;">
+      <button color="facebook" ion-button icon-start (click)="fblogin()">
+        <ion-icon name="logo-facebook"></ion-icon>
+        Iniciar con Facebook
+      </button>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-item no-lines>
+      <ion-label style="font-size: .7em;" color="light" floating>Username</ion-label>
+      <ion-input style="font-size: .8em;" type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item style="border-bottom: none !important">
+      <ion-label style="font-size: .8em;" color="light" floating>Password</ion-label>
+      <ion-input style="font-size: .9em;" type="password" [(ngModel)]="pw"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button color="violeta" full (click)="signin()">Entrar</button>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col (click)="createAccount()">
+      <p>No tenes cuenta?</p>
+    </ion-col>
+    <ion-col (click)="createAccount()">
+      <p>Crear cuenta</p>
+    </ion-col>
+  </ion-row>
+</ion-footer>

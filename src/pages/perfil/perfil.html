@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="navbar" no-border-bottom>
+
+  </ion-navbar>
+
+
+  <ion-item class="avatar" no-lines>
+    <ion-avatar item-start>
+      <img src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg">
+    </ion-avatar>
+    <h2>
+      {{nombreusuario}}
+    </h2>
+  </ion-item>
+</ion-header>
+
+<ion-content padding>
+  <ion-list class="links-perfil">
+    <button ion-item detail-none block menuClose *ngFor="let p of pages" (click)="openPage(p)">
+      {{ p.title }}
+    </button>
+  </ion-list>
+</ion-content>
+
+<ion-nav main [root]="rootPage"></ion-nav>

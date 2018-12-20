@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Postulados</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list *ngFor="let postulado of postulados">
+        <ion-item (click)="goToPerfil(postulado)">
+          <ion-avatar item-start>
+            <img src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg">
+          </ion-avatar>
+          <h2>{{postulado.nombre}} {{postulado.apellido}}</h2>
+          <p></p>
+        </ion-item>
+      </ion-list>
+</ion-content>

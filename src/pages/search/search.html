@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <button ion-button menuToggle>
+      <ion-icon color="iconMenu" name="menu"></ion-icon>
+    </button>
+    <ion-title>Buscar</ion-title>
+  </ion-navbar>
+  <ion-searchbar placeholder="Buscar" style="background-color: #ffffff !important;" [(ngModel)]="txtbusqueda" (ionInput)="getItems($event)"></ion-searchbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item (click)="goToBusqueda(txtbusqueda)" *ngIf="txtbusqueda">
+            {{ txtbusqueda }}
+          </ion-item>
+        <ion-item *ngFor="let item of items" (click)="goToBusqueda(item)">
+          {{ item }}
+        </ion-item>
+      </ion-list>
+</ion-content>

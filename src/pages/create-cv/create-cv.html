@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title>create-cv</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+  <button class="buttonHome" ion-button full color="celeste" icon-end (click)="expandItem(1)">
+    Datos Personales
+    <ion-icon [name]="visible1 ? 'arrow-down' : 'arrow-forward'"></ion-icon>
+  </button>
+  <ion-card *ngIf="expanded1">
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Nombre y Apellido</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Facha de Nacimeiento</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Domicilio</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>DNI</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Estado Civil</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Hijos</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <button class="buttonHome" ion-button full color="celeste" icon-end (click)="expandItem(2)">
+    Formación académica
+    <ion-icon [name]="visible2 ? 'arrow-down' : 'arrow-forward'"></ion-icon>
+  </button>
+  <button class="buttonHome" ion-button full color="celeste" icon-end (click)="expandItem(3)">
+    Experiencia laboral
+    <ion-icon [name]="visible3 ? 'arrow-down' : 'arrow-forward'"></ion-icon>
+  </button>
+</ion-content>
+<ion-footer>
+  <button style="margin: 0px !important; height: 50px;" ion-button full color="btnPostularse" (click)="goToTerminos()" [disabled]="!completolascats">Finalizar</button>
+</ion-footer>

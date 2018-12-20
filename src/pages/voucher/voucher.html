@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <button ion-button menuToggle>
+      <ion-icon color="iconMenu" name="menu"></ion-icon>
+    </button>
+    <ion-title>Voucher</ion-title>
+  </ion-navbar>
+  <div padding>
+    <ion-segment [(ngModel)]="icons" color="violeta">
+      <ion-segment-button value="camera">
+        Mis Vouchers
+      </ion-segment-button>
+      <ion-segment-button value="bookmark">
+        Vouchers Usados
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+<ion-content padding>
+
+
+  <div [ngSwitch]="icons">
+
+    <ion-list *ngSwitchCase="'camera'">
+
+      <voucher></voucher>
+
+      <ion-item *ngFor="let voucher of voucherssinusar" (click)="goToIntVoucher(voucher)">
+        <h3 class="voucher-titulo">{{voucher.titulo}}</h3>
+        <p text-wrap>{{voucher.detalle}}</p>
+        <p class="vencimiento">Vence en</p>
+        <p class="vencimiento">4 horas 32 minutos</p>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list class="voucher-info" *ngSwitchCase="'bookmark'">
+      <ion-item *ngFor="let voucher of vouchersusados" (click)="goToIntVoucher(voucher)">
+        <h3>{{voucher.titulo}}</h3>
+        <p text-wrap>{{voucher.detalle}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
